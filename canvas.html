@@ -2,11 +2,18 @@
 <html>
  <head>
   <style>
-  canvas{background:#000000;}
+  canvas{background:#000000;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+ border: 1px solid black;;
+}
   </style>
   <meta charset="utf-8"/>
   <script type="application/javascript">
-    var s = [1.5, 2, 3, 4, 5, 6];
+    var s = [1.5, 1.5, 2, 2.5, 3, 3.5];
     var pos = [0, 0, 0, 0, 0, 0];
 
     function startscreen(){
@@ -30,12 +37,6 @@
 
         ctx.save();
         ctx.translate(pos[1], 0);
-
-        ctx.fillStyle ="green";
-        ctx.font = "48px serif";
-        ctx.fillText("Hello Its Me", 10, 50);
-
-        ctx.restore();
 
         ctx.save();
         ctx.translate(pos[2], 0);
@@ -82,6 +83,14 @@
 
          ctx.restore();
 
+
+         ctx.fillStyle ="green";
+        ctx.font = "48px serif";
+        ctx.fillText("Hello Its Me", 20, 500);
+
+        ctx.restore();
+
+      
         pos[0] += s[0];
         pos[1] += s[1];
         pos[2] += s[2];
@@ -118,6 +127,7 @@
   </script>
  </head>
  <body onload="draw();">
-   <canvas id="canvas" width="500" height="350"></canvas>
+  <body background="http://wallpapercave.com/wp/geqhcaC.jpg">
+   <canvas id="canvas" width="500" height="500"></canvas>
  </body>
 </html>
